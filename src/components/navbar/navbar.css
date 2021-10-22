@@ -1,0 +1,59 @@
+.navbar-container {
+  display: flex;
+}
+
+.logo :hover {
+    cursor: pointer;
+}
+
+.logo-image {
+    font-size: 25px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.navbar-menu {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 15px;
+}
+
+.nav-item {
+  margin: 10px;
+}
+
+.resume-link {
+  text-decoration: none;
+  color: black;
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: white;
+  font-family: arial, sans-serif;
+}
+
+.social-icon {
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+.contact-button {
+  color: #ffffff;
+  border: 1px solid #4285f4;
+  border-radius: 2px;
+  line-height: 28px;
+  display: inline-block;
+  font-weight: bold;
+  outline: none;
+  padding: 0 12px;
+  background: #4387fd;
+  font-family: arial, sans-serif;
+  font-size: 13px;
+}
