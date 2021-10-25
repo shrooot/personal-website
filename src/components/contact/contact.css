@@ -1,3 +1,7 @@
+.contact-wrapper {
+    margin-top: 30px;
+}
+
 .main-content {
   display: flex;
   justify-content: center;
@@ -6,7 +10,6 @@
   padding-right: 40px;
   box-sizing: border-box;
 }
-
 
 .left-container {
     width: 40%;

@@ -23,9 +23,9 @@ const Navbar = () => {
           <MdApps className='social-icon' />
         </div>
         <div className='contact-button nav-item'>
-          <a href='/contact' className='contact-link'>
+          <Link to='/contact' className='contact-link'>
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </div>

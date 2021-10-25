@@ -2,6 +2,7 @@ import React from 'react';
 import mainImg from '../../assets/yashraj.png';
 import './homepage.css';
 import Typewriter from 'typewriter-effect';
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
   return (
@@ -50,10 +51,10 @@ const Homepage = () => {
         </div>
         <div className='homepage-btn'>
           <div className='hbtn mgin'>
-            <a href='https://www.google.com'> Projects/Work Experience</a>{' '}
+            <Link to='/skills'> Projects/Work Experience</Link>{' '}
           </div>
           <div className='hbtn'>
-            <a href='https://www.google.com'> I'm Feeling Lucky </a>
+            <Link to='/skills'> I'm Feeling Lucky </Link>
           </div>
         </div>
       </div>
