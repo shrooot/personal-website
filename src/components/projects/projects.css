@@ -1,0 +1,36 @@
+.proj_container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main_projects {
+  width: 90%;
+  padding-top: 20px;
+}
+
+.proj_line {
+  color: #808080;
+  font-size: 13px;
+}
+
+.project {
+  margin-top: 25px;
+}
+
+.title {
+  color: #1a0dab;
+  font-size: 22px;
+}
+
+.subTitle {
+  color: #006621;
+  font-size: 15px;
+}
+
+.projectList {
+    margin-bottom: 30px;
+}
+
+.description {
+    padding-left: 10px;
+}

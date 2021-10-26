@@ -1,0 +1,41 @@
+.expWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.exp_container {
+  /* padding: 20px; */
+  /* padding-left: 40px; */
+  width: 80%;
+}
+
+.expHeader {
+  color: #1a0dab;
+  font-size: 22px;
+}
+
+.work {
+    margin-top: 20px;
+}
+
+.workName {
+    color: #1a0dab;
+  font-size: 18px;
+}
+
+.role {
+    color: #006621;
+    font-size: 15px;
+}
+
+.descLine a{
+    text-decoration: none;
+    color:#545454;
+}
+
+.descLine {
+    color: #545454;
+    padding-left: 10px;
+}

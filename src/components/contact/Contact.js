@@ -1,10 +1,49 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { useState } from 'react';
 import imgContact from '../../assets/Effiel.jpg';
 import './contact.css';
 import SecNavbar from '../secondryNavbar/SecNavbar';
+import { send } from 'emailjs-com';
+
+import { init } from 'emailjs-com';
+init('user_UWPnH5cf0c9OqST5wQP72');
 
 const Contact = () => {
+  // service_kx0lwzr
+  const [toSend, setToSend] = useState({
+    from_name: '',
+    from_org: '',
+    message: '',
+    reply_to: '',
+  });
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    send(
+      'service_kx0lwzr',
+      'template_ffmomoe',
+      toSend,
+      'user_UWPnH5cf0c9OqST5wQP72'
+    )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setToSend({from_name : ""})
+        setToSend({from_org: ""})
+        setToSend({message: ""})
+        setToSend({reply_to: ""})
+        window.alert("Message sent successfully to Yashraj")
+      })
+      .catch((err) => {
+        console.log('FAILED...', err);
+      });
+  };
+
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
+
   return (
     <React.Fragment>
       <SecNavbar />
@@ -18,22 +57,28 @@ const Contact = () => {
               </h4>
             </div>
             <div className='form-container'>
-              <Form className='contact-form'>
+              <Form className='contact-form' onSubmit={onSubmit}>
                 <Form.Group className='mb-3' controlId='name'>
                   <Form.Label>Name</Form.Label>
                   <Form.Control
                     type='name'
-                    placeholder='Enter Name'
+                    placeholder='Enter your Name'
                     required={true}
+                    name='from_name'
+                    value={toSend.from_name}
+                    onChange={handleChange}
                   />
                 </Form.Group>
 
                 <Form.Group className='mb-3' controlId='org'>
                   <Form.Label>Organization</Form.Label>
                   <Form.Control
-                    type='email'
+                    type='name'
                     placeholder='Organization name'
                     required={true}
+                    name='from_org'
+                    value={toSend.from_org}
+                    onChange={handleChange}
                   />
                 </Form.Group>
 
@@ -43,6 +88,9 @@ const Contact = () => {
                     type='email'
                     placeholder='Enter email'
                     required={true}
+                    name='reply_to'
+                    value={toSend.reply_to}
+                    onChange={handleChange}
                   />
                   <Form.Text className='text-muted'>
                     I'll never share your email with anyone else.
@@ -55,6 +103,9 @@ const Contact = () => {
                   placeholder='Leave a message here'
                   style={{ height: '100px' }}
                   required={true}
+                  name='message'
+                  value={toSend.message}
+                  onChange={handleChange}
                 />
                 <Button
                   className='submit-button'

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBootstrap, FaHtml5, FaNodeJs, FaReact } from 'react-icons/fa';
+import { FaBootstrap, FaFlask, FaHtml5, FaNodeJs, FaReact } from 'react-icons/fa';
 import { FaCss3 } from 'react-icons/fa';
 import {
   DiGit,
@@ -47,6 +47,7 @@ const SkillsList = [
       { name: 'Node.js', img: <FaNodeJs /> },
       { name: 'MongoDB', img: <DiMongodb /> },
       { name: 'MySQL', img: <DiMysql /> },
+      { name: 'Flask', img: <FaFlask /> },
       { name: 'API Design', img: <AiFillApi /> },
     ],
   },

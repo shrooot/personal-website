@@ -11,15 +11,15 @@ const Skills = () => {
       <div className='skillsContainer'>
         <div className='skillsList' style={{ backgroundImage: `url(${willsmith})`}}>
           <div className='topLine'>About 20+ important skills found</div>
-          {list.map((skill) => {
+          {list.map((skill, indx) => {
             return (
-              <div className="zz22">
+              <div className="zz22" key = {indx}>
                 <div className='skill-head'>{skill.domain_name}</div>
                 <div className='skill-desc'>{skill.description}</div>
                 <div className='indexedSkills'>
-                  {skill.skill_name.map((s) => {
+                  {skill.skill_name.map((s,k) => {
                     return (
-                      <div className="skills_wrapper">
+                      <div className="skills_wrapper" key = {k}>
                         <div>{s.name}</div>
                         <div className = "skill_image">
                           {s.img}

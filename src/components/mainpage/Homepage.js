@@ -51,10 +51,10 @@ const Homepage = () => {
         </div>
         <div className='homepage-btn'>
           <div className='hbtn mgin'>
-            <Link to='/skills'> Projects/Work Experience</Link>{' '}
+            <Link to='/projects'> Projects/Work Experience</Link>{' '}
           </div>
           <div className='hbtn'>
-            <Link to='/skills'> I'm Feeling Lucky </Link>
+            <Link to='/contact'> I'm Feeling Lucky </Link>
           </div>
         </div>
       </div>
