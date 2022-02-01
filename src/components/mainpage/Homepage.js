@@ -54,7 +54,7 @@ const Homepage = () => {
             <Link to='/projects'> Projects/Work Experience</Link>{' '}
           </div>
           <div className='hbtn'>
-            <Link to='/contact'> I'm Feeling Lucky </Link>
+            <Link to='/contact'>Get in touch</Link>
           </div>
         </div>
       </div>
